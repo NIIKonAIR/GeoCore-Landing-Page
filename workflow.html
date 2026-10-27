@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoCore™ — Как это работает (Workflow)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-slate-950 text-slate-100 antialiased selection:bg-rose-600 selection:text-white">
+
+    <!-- Навигация -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-slate-950/80 border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <a href="index.html" class="text-2xl font-bold tracking-tight text-white flex items-center gap-2">
+                <span class="w-3 h-3 bg-rose-600 rounded-sm"></span>GeoCore™
+            </a>
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="index.html" class="hover:text-white transition">Главная</a>
+                <a href="workflow.html" class="text-white">Как это работает</a>
+                <a href="download.html" class="hover:text-white transition">Скачать / Триал</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <a href="download.html" class="bg-rose-600 hover:bg-rose-700 text-white px-5 py-2.5 rounded-lg text-sm font-semibold transition shadow-lg shadow-rose-900/30">
+                    Триал 7 дней
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Заголовок -->
+    <section class="pt-20 pb-12 border-b border-slate-800/60">
+        <div class="max-w-7xl mx-auto px-6 text-center">
+            <h1 class="text-4xl font-extrabold text-white mb-4">Архитектура и Workflow программы GeoCore™</h1>
+            <p class="text-slate-400 max-w-2xl mx-auto">GeoCore™ объединяет автономный предварительный расчет кварталов и точный пакетный анализ выписок без сложной настройки сторонних ГИС.</p>
+        </div>
+    </section>
+
+    <!-- 4 Шага Workflow -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-6 space-y-16">
+            
+            <!-- Шаг 1 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center bg-slate-900/40 border border-slate-800 p-8 rounded-3xl">
+                <div>
+                    <span class="text-rose-500 font-bold text-sm tracking-wider uppercase mb-2 block">Шаг 1 из 4</span>
+                    <h3 class="text-2xl font-bold text-white mb-4">Граница ЗОУИТ — из любого рабочего источника</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">Выберите удобный способ ввода: программа быстро приведёт геометрию к рабочему виду.</p>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li><strong>Кадастровый номер:</strong> Автоматический онлайн-запрос геометрии зоны.</li>
+                        <li><strong>DXF:</strong> Автоматическая очистка мусора, текстов и размеров; 2D-сплющивание.</li>
+                        <li><strong>XML:</strong> Импорт XML-файлов границ без ручной конвертации.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 p-6 rounded-2xl">
+                    <div class="text-xs text-slate-500 font-mono mb-2">INPUT MODULE</div>
+                    <div class="bg-slate-900 p-4 rounded-xl text-rose-400 font-mono text-sm">
+                        [Number Query] ➔ [DXF/XML Parser] ➔ [2D Flattening]
+                    </div>
+                </div>
+            </div>
+
+            <!-- Шаг 2 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center bg-slate-900/40 border border-slate-800 p-8 rounded-3xl">
+                <div class="order-2 md:order-1 bg-slate-950 border border-slate-800 p-6 rounded-2xl">
+                    <div class="text-xs text-slate-500 font-mono mb-2">AUTONOMOUS SPATIAL FILTER</div>
+                    <div class="bg-slate-900 p-4 rounded-xl text-emerald-400 font-mono text-sm">
+                        .gpkg + R-tree ➔ Список целевых кварталов для КПТ
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <span class="text-rose-500 font-bold text-sm tracking-wider uppercase mb-2 block">Шаг 2 из 4</span>
+                    <h3 class="text-2xl font-bold text-white mb-4">Автономный подбор кварталов и экономия бюджета</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">Встроенная локальная база .gpkg со вшитым пространственным индексом R-tree мгновенно определяет, какие именно кадастровые кварталы пересекает зона.</p>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li><strong>Автономная база:</strong> Работает полностью офлайн прямо на вашем компьютере.</li>
+                        <li><strong>Точный список для КПТ:</strong> Программа формирует список затронутых кварталов, чтобы вы скачали <strong>только нужные файлы</strong> и не тратили деньги на покупку лишних выписок вслепую.</li>
+                        <li><strong>Прозрачный процесс:</strong> Вы скачиваете XML-файлы КПТ по полученному списку из официальных источников и передаете их в программу.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Шаг 3 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center bg-slate-900/40 border border-slate-800 p-8 rounded-3xl">
+                <div>
+                    <span class="text-rose-500 font-bold text-sm tracking-wider uppercase mb-2 block">Шаг 3 из 4</span>
+                    <h3 class="text-2xl font-bold text-white mb-4">Гео-ядро считает пересечения без ручной рутины</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">Расчёты выполняются последовательно и не блокируют работу инженера.</p>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li><strong>Shapely + GeoPandas:</strong> Математические расчёты геометрии на проверенном стеке.</li>
+                        <li><strong>Метрики:</strong> Площадь наложения в кв. м и процент пересечения для каждого участка.</li>
+                        <li><strong>QThread:</strong> Многопоточная обработка: приложение не зависает даже на сотнях XML КПТ.</li>
+                    </ul>
+                </div>
+                <div class="bg-slate-950 border border-slate-800 p-6 rounded-2xl">
+                    <div class="text-xs text-slate-500 font-mono mb-2">GEOMETRY ENGINE</div>
+                    <div class="bg-slate-900 p-4 rounded-xl text-sky-400 font-mono text-sm">
+                        MultiThread QThread ➔ Intersection Polygon Area Metrics
+                    </div>
+                </div>
+            </div>
+
+            <!-- Шаг 4 -->
+            <div class="grid md:grid-cols-2 gap-12 items-center bg-slate-900/40 border border-slate-800 p-8 rounded-3xl">
+                <div class="order-2 md:order-1 bg-slate-950 border border-slate-800 p-6 rounded-2xl">
+                    <div class="text-xs text-slate-500 font-mono mb-2">OUTPUT EXPORT</div>
+                    <div class="bg-slate-900 p-4 rounded-xl text-amber-400 font-mono text-sm">
+                        01 / Excel Ведомость <br>02 / DXF Многослойный CAD-чертеж
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <span class="text-rose-500 font-bold text-sm tracking-wider uppercase mb-2 block">Шаг 4 из 4</span>
+                    <h3 class="text-2xl font-bold text-white mb-4">На выходе — ведомость и CAD-чертеж</h3>
+                    <p class="text-slate-400 mb-6 leading-relaxed">Два формата результата закрывают аналитическую и графическую часть проекта.</p>
+                    <ul class="space-y-3 text-slate-300 text-sm">
+                        <li><strong>Excel:</strong> Полная ведомость кадастровых номеров и площадей наложений.</li>
+                        <li><strong>DXF Чертеж:</strong> Многослойный файл с разнесением цветов ACI для ЗОУИТ, участков и подписей.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="bg-slate-950 border-t border-slate-800 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-slate-500">
+            <div>© 2026 GeoCore™. Разработчик: Зольников Николай | Email: <a href="mailto:Zolnikov.ns@yandex.ru" class="text-rose-400 hover:underline">Zolnikov.ns@yandex.ru</a>. Все права защищены.</div>
+            <div class="flex gap-6">
+                <a href="index.html" class="hover:text-slate-300 transition">Главная</a>
+                <a href="workflow.html" class="hover:text-slate-300 transition">Workflow</a>
+                <a href="download.html" class="hover:text-slate-300 transition">Скачать</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
